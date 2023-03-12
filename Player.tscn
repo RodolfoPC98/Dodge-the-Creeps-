@@ -41,4 +41,14 @@ frame = 1
 scale = Vector2( 0.5, 0.5 )
 shape = SubResource( 2 )
 
+[node name="Mob" type="RigidBody2D" parent="."]
+collision_mask = 0
+gravity_scale = 0.0
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Mob"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mob"]
+
+[node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Mob"]
+
 [connection signal="body_entered" from="." to="." method="_on_Player_body_entered"]
